@@ -15,8 +15,11 @@ cards_list = []
 
 with os.scandir('dbase/') as base_files:
 	for find_files in base_files:
-		file = int(find_files.name[0:4])
-		cards_list.append(file)
+		try:
+			file = int(find_files.name[0:4])
+			cards_list.append(file)
+		except ValueError:
+			pass
 
 index_days_list = [0.0, 0.1, 0.2, 0.3, 0.4,
 0.5, 0.6, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6,
