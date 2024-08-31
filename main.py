@@ -16,8 +16,12 @@ cards_list = []
 with os.scandir('dbase/') as base_files:
 	for find_files in base_files:
 		try:
-			file = int(find_files.name[0:4])
-			cards_list.append(file)
+			file = find_files.name.endswith('.xlsx')
+			if file == True:
+				file = int(find_files.name[0:4])
+				cards_list.append(file)
+			else:
+				pass
 		except ValueError:
 			pass
 
