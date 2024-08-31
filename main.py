@@ -1,6 +1,7 @@
 import pandas
 import calendar
 from datetime import date
+import os
 
 today = date.today()
 
@@ -10,14 +11,20 @@ year = today.year
 
 day_in_month = calendar.monthrange(year, month)[1]
 
-cards_list = [5688, 1109, 1147, 3412, 6840]
-month_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+cards_list = []
+
+with os.scandir('dbase/') as base_files:
+	for find_files in base_files:
+		file = int(find_files.name[0:4])
+		cards_list.append(file)
 
 index_days_list = [0.0, 0.1, 0.2, 0.3, 0.4,
 0.5, 0.6, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6,
 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0, 3.1,
 3.2, 3.3, 3.4, 3.5, 3.6, 4.0, 4.1, 4.2, 4.3, 4.4,
 4.5, 4.6, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6]
+
+month_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 work_days_list = ['First shift', 'Second shift',
 'Conditionally the second shift', 'Night shift', 'Sleep day',
