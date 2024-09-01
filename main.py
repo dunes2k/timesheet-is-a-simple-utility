@@ -110,11 +110,6 @@ def processing(card, current_day, month):
 		print(' Incorrect input, no such card number')
 
 def main_start():
-	art_line_a = '              _..----.._    _'
-	art_line_b = "            .'  .--.    ""-.(0)_"
-	art_line_c = ''"-.__.-'"'=:|   ,  _)_ \\__ . c\\''-..'
-	art_line_d = '             '''"------'---''---'-"
-	print('{0}\n{1}\n{2}\n{3}\n'.format(art_line_a, art_line_b, art_line_c, art_line_d))
 	while True:
 		try:
 			card = int(input(' Enter your card number: '))
