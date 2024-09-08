@@ -37,32 +37,14 @@ work_days_list = ['First shift', 'Second shift',
 'Conditionally the second shift', 'Night shift', 'Sleep day',
 'Day off', 'No data']
 
+month_name_list = ['January', 'February', 'March', 'April',
+'May', 'June', 'July', 'August', 'September', 'October',
+'November', 'December']
+
 def month_names(month):
-	match month:
-		case 1:
-			return 'January'
-		case 2:
-			return 'February'
-		case 3:
-			return 'March'
-		case 4:
-			return 'April'
-		case 5:
-			return 'May'
-		case 6:
-			return 'June'
-		case 7:
-			return 'July'
-		case 8:
-			return 'August'
-		case 9:
-			return 'September'
-		case 10:
-			return 'October'
-		case 11:
-			return 'November'
-		case 12:
-			return 'December'
+	for month_index in month_list:
+		if month == month_index:
+			return month_name_list[month - 1]
 
 def timesheet(card, current_day, month):
 	for month_detecting in month_list:
