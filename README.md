@@ -6,4 +6,4 @@ Reads data from .xlsx table files.
 - **Enter to install:** *pip install pandas*
 - **An alternative for linux users:** *sudo apt-get install python-pandas*
 
-![intro](https://github.com/user-attachments/assets/7d8c457c-ea5a-4681-85ad-6caf51df60ea)
+![intro](https://github.com/user-attachments/assets/16e18394-4edb-4c5c-bcd5-11c848c40758)
